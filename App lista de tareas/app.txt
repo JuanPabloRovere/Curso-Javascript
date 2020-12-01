@@ -1,0 +1,4 @@
+Hacer app lista de tareas con JS
+
+Las class las uso para trabajar con css
+Los id para trabajar con js

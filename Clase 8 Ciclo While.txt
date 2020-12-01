@@ -1,0 +1,34 @@
+Clase 8 de javascript CICLO WHILE
+
+la expresion se va a repetir siempre que la condicion se cumpla
+
+muchas veces se crashea cuando algo da infinito
+
+while (condition){
+   expression
+}
+
+Siempre que i sea menor o igual a 10 va a escribir el valor
+		var i = 0
+		while (i <= 10){
+			document.write( i + "<br>");
+			i++;
+		}
+
+
+EJEMPLO DE CICLO
+		var dias = ["lunes","martes","miecoles","jueves","viernes"];
+		var numerodias = dias.length -1;
+		var i = 0;
+		while (i <= numerodias){
+			document.write( dias[i] + "<br>");
+			i++;
+		}
+
+DIFERENCIA DE CICLO WHILE Y DO WHILE
+En while solo ejecuta la accion cuando se cumple una condicion
+En DO while va a cumplir una accion cuando no se cumpla la condicion y cuando se cumpla va a hacer otra
+
+do{
+  Siempre ejecuta al menos 1 vez
+}while(condicion);

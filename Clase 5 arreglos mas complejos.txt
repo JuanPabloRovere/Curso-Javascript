@@ -1,0 +1,62 @@
+clase 5 de javascript metodos y propiedades para los arreglos
+
+Metodo length (propiedad para saber la cantidad de elementos que tengo en mi array
+
+Si pongo asi, me va a escribir en el documento la cantidad de elementos que tiene amigos
+
+	<script>
+		
+		var amigos = ["carlos", "Cesar", "alex"];
+		document.write( amigos.length );
+
+	</script>
+
+o 
+
+document.write( "tienes " + amigos.length + " amigos" );
+
+Si quiero agregar mas valores a algo puedo hacer lo siguiente (el valor de fernando se va a sumar al final de la cadena amigos, lo cual nos daria 4 elementos)
+
+		var amigos = ["carlos", "Cesar", "alex"];
+        amigos[amigos.length] = "fernando";
+
+PERO Es MEJOR HACERLO ASI ( DE ESTA FORMA LOS ELEMENTOS SE VAN A AGREGAR AL FINAL )
+
+		var amigos = ["carlos", "Cesar", "alex"];
+
+        amigos.push("luis","fernando","oscar");
+
+
+
+Si quisiera sacar un elemento (asi sacaria el ultimo)
+
+		var amigos = ["carlos", "Cesar", "alex"];
+
+        amigos.pop();
+
+Si yo quisiera sumar dos cadenas de arrays
+
+		var amigos = ["carlos", "Cesar", "alex"];
+
+        var amigos2 = ["luis", "oscar" , "toretto"];
+
+        var amigos3 = amigos.concat(amigos2);
+
+Join sirve para poner cosas entre los elementos del array
+En este caso quedarian los nombres y entre cada uno un espacio.
+
+		var amigos = ["carlos", "Cesar", "alex"];		
+
+		document.write(amigos.join(" : "));
+
+Para ordenarlos
+
+		var amigos = ["carlos", "Cesar", "alex"];		
+
+		var ordenados = amigos.sort();
+		document.write(ordenados);
+
+
+
+
+

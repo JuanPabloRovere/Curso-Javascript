@@ -1,0 +1,21 @@
+Clase 1 de JAVASCRIPT INTRO
+
+Como el script esta antes que el mensaje se ejecuta primero, si lo pusiera segundo se ejecutaria al reves.
+
+<body>
+	<script>
+		alert("toreto se paro");
+	</script>
+	<h1>Sitio web</h1>
+
+</body>
+
+Los scripts no se suelen poner asi adentro del codigo principal, si no que se abren a parte.
+Pongo lo siguiente en el original (por lo general se usa el poner este codigo al final del body)
+
+	<script src="intro.js"></script>
+
+Y en el javascript a parte pongo lo que quiero hacer
+
+alert("Hola")
+

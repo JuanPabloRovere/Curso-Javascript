@@ -1,0 +1,52 @@
+Clase 16 modificando, reemplazando y eliminando nodos del DOM
+
+De esta forma cambio el texto llamado "primero" por este nuevo texto, (innerHTML)
+con el primer codigo traigo primero al script
+con el segundo lo modifico
+
+	<ol id="lista">
+		<li id="primero">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+		<li>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</li>
+    </ol>
+
+
+<script>
+	var primerElemento = document.getElementById("primero");
+	primerElemento.innerHTML = "cccccccccccc";
+
+Si en vez de innerHTML pongo 
+primerElemento.textContent 
+la diferencia entre esta funcion e innerHTML es que con innerHTML puedo acceder a absolutamente todo el texto y sus modificaciones (ejemplo negritas)
+con textContent solo accedo al texto, si tiene negritas o lo que sea no lo agarra
+Lo bueno de esta nueva funcion es que al agarrar solo el texto puedo aprovechar y ponerle las negritas o lo que quiera en este momento
+
+
+Con estas herramientas puedo reemplazar el primer elemento de "li", al crear uno nuevo y eliminar otro
+
+	<ol id="lista">
+		<li id="primero">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+		<li>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</li>
+    </ol>
+
+
+<script>
+
+	var elemento = document.createElement("li");
+	    contenido = document.createTextNode("Nuevo Texto");
+	elemento.appendChild(contenido);
+
+	var padre = document.getElementsByTagName("li")[0].parentNode;
+	var referencia = document.getElementsByTagName("li")[0];
+	padre.replaceChild(elemento, referencia);
+
+
+De esta forma elimino completamente un elemento del codigo, no va a aparecer ni en la consola
+
+	var elemento = document.createElement("li");
+	    contenido = document.createTextNode("Nuevo Texto");
+	elemento.appendChild(contenido);
+
+	var padre = document.getElementsByTagName("li")[0].parentNode;
+	referencia = document.getElementsByTagName("li")[0];
+	padre.removeChild(referencia);
+

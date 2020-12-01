@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<ol id="lista">
+		<li id="primero">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+		<li>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</li>
+    </ol>
+
+
+<script>
+
+	var elemento = document.createElement("li");
+	    contenido = document.createTextNode("Nuevo Texto");
+	elemento.appendChild(contenido);
+
+	var padre = document.getElementsByTagName("li")[0].parentNode;
+	referencia = document.getElementsByTagName("li")[0];
+	padre.removeChild(referencia);
+
+
+</script>
+
+</body>
+</html>

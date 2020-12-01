@@ -1,0 +1,67 @@
+Clase 3 de Javascript Tipos de datos
+
+Tipos de datos
+
+1. numerico
+2. string o cadena de texto
+3. array o arreglo
+4. objet o objeto
+5. boolean o boleano
+6. undefined
+7. null
+8. Nan
+
+1. numerico
+
+Puede ser entero 10 1 3
+Decimal o float 10,2 130,20 23,1234
+operaciones 10+2 20*3 20/2
+
+2. strings
+
+var nombre = "cadena de texto';
+var apellido ="toreto";
+
+document.write(nombre+" "+apellido);
+
+o 
+
+var texto ="los mejores videos son de /"toreto/""
+(PARA PONER COMILLA DENTRO DE COMILLA)
+
+3 ARRAY conjunto de elementos de cualquier tipo
+
+var amigos = ["carlos, alejandro, cesar"];
+
+document.write(amigos[0,1,2]);
+
+Si yo pongo 0 o 1 o 2, me va a tirar en orden la palabra que yo puse
+
+4. objeto
+son similares a los arreglos, sirve para hacerle alguna modificacion a algun objeto
+
+var objeto ={
+   color: "black";
+   size: 12;
+}
+
+5. Boolean
+Permiten almacenar true o false, o comparaciones
+
+var boleano = false;
+
+6. Undefined, valores que no tienen nnguna definicion
+
+var falconmasters;
+document.write(falconmasters);
+
+7. Null para establecer un valor a nulo (en este caso terminaria haciendo que el 10 sea nulo)
+
+var numero2 = 10;
+
+var numero2 =null;
+
+8. NaN valor invalido (no puedo multiplicar un texto con numero entonces me tira NaN)
+
+var texto2 ="hola como estas?";
+document.write(texto2 * 2)

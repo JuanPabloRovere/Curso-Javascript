@@ -1,0 +1,20 @@
+Clase 4 de Javascript ARREGLOS o ARRAYS
+Conjunto de elementos que podemos almacenar en un solo lugar
+
+
+En este caso me tiraria el nombre alex, porque seria 0, 1 y 2
+
+<body>
+	<script>
+		
+		var amigos = ["carlos", "Cesar", "alex"];
+		document.write(amigos[2])
+
+	</script>
+</body>
+
+Si en una pagina en ejecucion yo quisiera cambiar carlos (cambiaria el valor 0 y le asignaria un valor nuevo)
+
+		var amigos = ["carlos", "Cesar", "alex"];
+		amigos[0] = "toretto"
+		document.write(amigos[0])

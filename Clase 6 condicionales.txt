@@ -1,0 +1,74 @@
+Clase 6 de javascript CONDICIONALES
+
+> menor que
+< mayor que
+<= mayor o igual
+== igual que
+!= distinto de
+|| or
+&& y
+=== no solo que sea igual sino que tambien sea del mismo tipo
+
+Se va a realizar una determinada accion dependiendo de si se cumple o no la condicion
+
+	<script>
+		if( condicion ){
+			instrucciones
+		} else{
+			instrucciones
+		}
+    </script>
+
+Si yo uso la coma en vez del punto y coma, no hace falta que ponga la palabra var al comienzo de la siguiente variable
+
+		var nombre = "Carlos",
+		    edad =19;
+	
+EJEMPLO
+
+	<script>
+
+		var nombre = "asdasd";
+		var edad =19;
+
+		if( nombre == "Carlos" ){
+			document.write("Bienvenido" + " " + nombre);
+		} else {
+			document.write("Bienvenido anonimo");
+		}
+
+
+    </script>
+
+EJEMPLO DE ELSE IF 
+
+		var nombre = "Arturo";
+		var edad =19;
+
+		if( edad == 18 ){
+			document.write("Bienvenido, tienes 18");
+		} else if (nombre == "Arturo") {
+			document.write("Bienvenido" + nombre);
+		} else {
+			document.write("No tienes 18");
+		}
+
+EJEMPLO DE MAYOR DE EDAD
+
+		if ( edad >= 18) {
+         document.write("sos mayor de edad perri");
+		} else {
+			document.write("chupala");
+		}
+
+EJEMPLO DE DOS CONDICIONES EN UNA 
+
+		if ( edad >= 18 && nombre == "Carlos") {
+         document.write("sos mayor de edad perri");
+		} else {
+
+SI SE CUMPLE UNA O LA OTRA ENTONCES VA
+
+		if ( edad >= 18 || nombre == "Carlos") {
+         document.write("sos mayor de edad perri");
+

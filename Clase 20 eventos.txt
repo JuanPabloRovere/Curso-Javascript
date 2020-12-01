@@ -1,0 +1,34 @@
+Clase 20 eventos del DOM
+
+Mirar la pagina de marcadaores con todas las propiedades que puedo usar en javascript
+
+Existen 3 tipos de modelos
+modelos de eventos basicos
+modelos de eventos estandar
+modelos de eventos de internet explorer
+
+En este caso usamos el estandar, que es el mas usado.
+Se pone el tipo de evento que queremos hacer y en listener se agrega la funcion que queremos hacer
+boton.addEventListener(type, listener);
+
+Se puede hacer asi pero no conviene porque va a ser una funcion anonima, no se va a ver el resultado sino en la consola
+
+		(function(){
+			var boton = document.getElementById("boton");
+			boton.addEventListener("click", function(){
+			   console.log("funciono!");
+			});
+
+Con esta funcion puedo remover un evento
+
+boton.removeEventListener(tipo, listener)
+
+
+Con esta funcion puedo reconocer el tipo de evento que estoy usando
+En este caso cuando haga click en el saludo, en la consola me va a aparecer que el evento es de tipo click
+
+			var saludo = function(e){
+				console.log("Este evento es" + e.type);
+
+
+

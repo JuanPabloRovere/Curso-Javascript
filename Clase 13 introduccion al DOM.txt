@@ -1,0 +1,26 @@
+Clase 13 de javascript Introduccion al DOM (document objet model)
+
+Es la estructura de nuestro sitio web, conformada por nodos.
+Consta de dos elementos: el head y el body
+El objetivo del DOM es poder acceder a los elementos de forma sencilla
+
+En este caso con document.getElementsByTagName puedo acceder a todos los elementos que sean <p> sin importar que tengan un id
+
+<body>
+	<h1 id="titulo">Titulo de la pagina</h1>
+	<p>1.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+	<p id="segundo">2.bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+
+	<p id="tercero">3.ccccccccccccccccccccccccccccccc</p>
+
+<script>
+	var elementosP = document.getElementsByTagName("p")
+
+</script>
+
+</body>
+
+De esta forma accederia a un elemento por su id
+
+	var segundoParrafo = document.getElementById("segundo");

@@ -1,0 +1,69 @@
+Clase 15 DOM Agregando nodos al dom
+
+Como posicionar los elementos donde yo lo necesite (en este caso lo estoy poniendo al final de la lista)
+
+Con document.getElementByTagName estoy trayendo todos los elementos li
+Con el 0 le digo que quiero traer el primero
+COn parentNode le digo que me devuelva cual es el elemento padre
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<ol>
+		<li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+		<li>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</li>
+    </ol>
+
+
+<script>
+	var elemento = document.createElement("li");
+	    contenido = document.createTextNode("Nuevo Texto");
+
+	elemento.appendChild(contenido);
+
+    var padre = document.getElementByTagName("li") [0].parentNode;
+	padre.appendChild(elemento);
+
+</script>
+
+</body>
+</html>
+
+Pero le podria poner un ID y se simplificaria mas, porque sabria cual es exactamente el que traigo
+
+<body>
+	<ol id="lista">
+		<li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+		<li>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</li>
+    </ol>
+
+
+<script>
+	var elemento = document.createElement("li");
+	    contenido = document.createTextNode("Nuevo Texto");
+
+	elemento.appendChild(contenido);
+
+    var padre = document.getElementById("lista");
+	padre.appendChild(elemento);
+
+</script>
+
+Con appendChild lo pongo al final, de esta forma yo selecciono en que posicion lo quiero poner
+
+<script>
+	var elemento = document.createElement("li");
+	    contenido = document.createTextNode("Nuevo Texto");
+
+	elemento.appendChild(contenido);
+
+    var padre = document.getElementByTagName("li") [0].parentNode;
+    var primerElemento =document.getElementByTagName("li")[0];
+	padre.insertBefore(elemento, primerElemento);
+
+</script>
+

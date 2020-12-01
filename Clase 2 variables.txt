@@ -1,0 +1,50 @@
+Clase 2 de javascript Variables
+
+Una variable es un contenedor de un valor
+
+<body>
+	<script>
+		
+		var nombre = "Carlos";
+
+		alert(nombre);
+
+	</script>
+</body>
+
+Prompt sirve para almacenar un texto y un valor
+
+	<script>
+		
+		var nombre;
+
+		prompt("Ingresa tu nombre","valor");
+
+		// alert(nombre);
+		// esto manda alerta en pantalla, no se ve en la pagina
+
+	</script>
+</body>
+
+La variable es nombre
+Lo que yo escriba en el prompt (en la pagina) va a ser el valor de nombre
+Alert lo va a tirar en pantalla
+
+	<script>
+		
+		var nombre;
+
+	nombre = prompt("Ingresa tu nombre","valor");
+
+	alert(nombre);
+
+	</script>
+
+Para que lo que yo escriba en el Prompt se ponga en el documento
+
+	nombre = prompt("Ingresa tu nombre","valor");
+
+	document.write(nombre);
+
+	</script>
+

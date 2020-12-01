@@ -1,0 +1,47 @@
+Clase 19 Modificando el estilo de los elementos
+
+Ejemplo de como una imagen se achica y se agranda con un boton
+Con transition:300ms all ease le digo como va a ser el cambio de la imagen, para que no sea de golpe y sea como una animacion
+Con este codigo creo el boton, le doy un nombre y le digo que funcion va a hacer cuando lo presione
+<form action="">
+		<input type="button" value="cambio de tamano" onclick="zoom()">
+	</form>
+Despues en el script creo las variables y le pongo la condicion para que crezca cuando esta chica y se achique cuando esta grande
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modificar estilos de los elementos</title>
+	
+	<style>
+		.thumb{
+			width:200px;
+			transition:300ms all ease;
+		}
+	    .grande{
+	    	width:400px;
+	    }
+		
+
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="button" value="cambio de tamano" onclick="zoom()">
+	</form>
+ <img id="thumb" class="thumb" src="https://depor.com/resizer/y25G5YK2sFK8QWn76e9oeQ0Fg9w=/1200x1200/smart/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/B2W6WLHG5JCBND6OMQ5VTUW3K4.jpg" width="400">
+
+<script>
+	var zoom = function(){
+		var thumb = document.getElementById("thumb");
+		if(thumb.className == "thumb"){
+			thumb.className = "thumb grande";
+		} else {
+			thumb.className = "thumb";
+		}
+	} 
+</script>
+</body>
+</html>

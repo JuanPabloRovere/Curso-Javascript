@@ -1,0 +1,17 @@
+Clase 21 FORMULARIOS
+
+Ejemplo de formulario
+Tiene para poner el nombre, sexo, aceptar terminos y condiciones, y enviar
+
+	<form action="" name="formulario" method="get">
+		<input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre: ">
+		<br>
+
+		<input type="radio" name="sexo" id="hombre" value="hombre">hombre
+		<input type="radio" name="sexo" id="mujer" value="mujer">mujer
+		<br>
+
+		<input type="checkbox" name="terminos" id="terminos">terminos y condiciones
+
+		<input type="submit" name="btn" name="btn" value="enviar">
+	</form>

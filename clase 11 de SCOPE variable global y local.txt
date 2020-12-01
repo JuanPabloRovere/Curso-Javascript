@@ -1,0 +1,66 @@
+Clase 11 de javascript SCOPE (AMBITO DE VARIABLES)
+
+Es lo que determina la accesibilidad de nuestros codigos
+
+El scope GLOBAL> Podemos acceder a ellas desde cualquier parte del codigo
+El scope LOCAL> variables creadas dentro de una funcion, solo podemos acceder a ellas desde su funcion o una funcion anidada
+
+Ejemplo de variable global
+
+	var variableGlobal = "Esta es una variable global";
+	alert(variableGlobal);
+
+Otro ejemplo de variablo global, podemos acceder a esta variable desde cualquier lado
+
+	var variableGlobal = "Esta es una variable global";
+
+	var miFuncion = function(){
+
+		alert(variableGlobal);
+	}
+	miFuncion();
+
+EJEMPLO DE UNA LOCAL (Todo tiene que estar en la misma funcion, sino no se ejecuta. Esto sirve porque capaz laburo con otro plugin y en ese plugin tienen asignado un mismo nombre a una variable mia y se va a armar lio)
+
+	var variableGlobal = "Esta es Globa";
+
+	var miFuncion = function(){
+		var variableLocal = "Esta es loca";
+		alert(variableLocal);
+	}
+	miFuncion();
+
+Si yo mando a buscar una variable que tiene el mismo nombre en distintos sectores, el orden seria el siguiente
+Como se ve en el codigo el alert esta pidiendo mandar el mensaje de variableGlobal, pero hay dos que se llaman asi.
+En este caso va a tirar primero el mensaje que esta dentro del codigo que estoy mandando, si no lo encontrase ahi tomaria el de arriba (Y si hubiese uno aun mas afuera de estos dos lo tiraria en tercer lugar)
+
+var miFuncion = function(){
+   var variableLocal = "Esta es local";
+
+   var FuncionLocal = function(){
+      var variableLocal ="Esta tambien es local"
+
+alert(variableLocal)
+
+Si yo pusiese el alert al principio, no tomaria los codigos que tiene abajo. Entonces el alert siempre tiene que estar al final del codigo que tiene que buscar
+
+PARA PROTEGER MI CODIGO Y NO LO PUEDAN MODIFICAR DE AFUERA PONGO LO SIGUIENTE
+
+(function(){
+	
+
+}())
+
+Basicamente seria meter todas mis variables dentro de esto
+
+(function(){
+	
+		var variableGlobal = "Esta es Globa";
+
+	var miFuncion = function(){
+		var variableLocal = "Esta es loca";
+		alert(variableLocal);
+	}
+	miFuncion();
+
+}())

@@ -1,0 +1,27 @@
+Clase 24 Fechas y tiempo (objeto date)
+
+Con esta variable escribo la fecha y la hora en que entro a la pagina 
+
+			var fecha = new Date();
+			document.write(fecha);
+
+De esta forma separaria las horas para que en la consola me tire que hora, los minutos y segundos en el momento
+
+			var fecha = new Date();
+			document.write(fecha);
+
+			console.log(fecha.getHours());
+			console.log(fecha.getMinutes());
+			console.log(fecha.getSeconds());
+
+Lo mismo pero con fechas
+
+			console.log(fecha.getDay());
+			console.log(fecha.getDate());
+			console.log(fecha.getMonth());
+			console.log(fecha.getFullYear());
+
+
+
+
+

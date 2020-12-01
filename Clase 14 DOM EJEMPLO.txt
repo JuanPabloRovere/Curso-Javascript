@@ -1,0 +1,41 @@
+Clase 14 de DOM
+
+1. Crear un elemento
+2. Crear nodo de texto 
+3. Anadir nodo de texto
+4. Agregar atributos al elemento
+5. Agregar el elemento al documento.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<h1 id="titulo">Titulo de la pagina</h1>
+	<div id="subtitulo"></div>
+	<p>1.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+	<p id="segundo">2.bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+
+	<p id="tercero">3.ccccccccccccccccccccccccccccccc</p>
+
+<script>
+	var elementosP = document.getElementsByTagName("p");
+	var segundoParrafo = document.getElementById("segundo");
+
+	var elemento = document.createElement("h2");                               (1. Crear un elemento)
+	var contenido = document.createTextNode("Este es el titular");                  (2. Crear nodo de texto )
+	elemento.appendChild(contenido);                                          (3. Anadir nodo de texto)
+
+	elemento.setAttribute("align", "center");                                 (4. Agregar atributos al elemento)
+
+	document.getElementById("subtitulo").appendChild(elemento);               (5. Agregar el elemento al documento.)
+
+
+
+</script>
+
+</body>
+</html>

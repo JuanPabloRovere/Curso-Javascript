@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<h1 id="titulo">Titulo de la pagina</h1>
+	<div id="subtitulo"></div>
+	<p>1.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+	<p id="segundo">2.bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+
+	<p id="tercero">3.ccccccccccccccccccccccccccccccc</p>
+
+<script>
+	var elementosP = document.getElementsByTagName("p");
+	var segundoParrafo = document.getElementById("segundo");
+
+	var elemento = document.createElement("h2");
+	var contenido = document.createTextNode("Este es el titular");
+	elemento.appendChild(contenido);
+
+	elemento.setAttribute("align", "center");
+
+	document.getElementById("subtitulo").appendChild(elemento);
+
+
+
+</script>
+
+</body>
+</html>

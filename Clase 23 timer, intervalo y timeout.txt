@@ -1,0 +1,60 @@
+Clase 23 timers,timeout e interval
+
+Con este codigo mando a la consola un saludo pasando 1 segundo, pero se manda uno solo
+Tengo que poner 1000 porque se calcula en milisegundos
+	<script>
+		(function(){
+			var saludo = function(){
+				console.log("saludo!");
+			};
+			
+		setTimeout(saludo, 1000);
+
+
+		}())
+    </script>
+
+Si en vez de setTimeout uso esta funcion lo va ir repitiendo cada el tiempo que yo le ponga
+Entonces me va a mandar ese mensaje cada 3 segundos
+
+		setInterval(saludo, 3000);
+
+Si solo quisiera que se repitiese una cantidad de veces lo tendria que hacer asi
+Se va a repetir el intervalo hasta que llegue al valor que le ponga y despues se va a limpiar todo
+
+	<script>
+		(function(){
+			var contador = 0;
+			contador ++;
+
+			If(contador === 5){
+				clearInterval(intervalID);
+			}
+
+
+			var saludo = function(){
+				console.log("saludo!");
+			};
+
+		var interval = setInterval(saludo, 3000);
+
+
+		}())
+    </script>
+
+De esta forma podria repetir con setTimeout hasta el infinito, ya que cuando se reproduce la variable saludo, va a volver atras y despues va a llegar devuelta a la parte donde es manda la variable saludo y asi sucecivamente
+
+	<script>
+		(function(){
+			var contador = 0;
+			var saludo = function(){
+			contador ++;
+			console.log(contador);
+
+			setTimeout(saludo,3000);
+		};
+
+		saludo();
+
+		}())
+    </script>

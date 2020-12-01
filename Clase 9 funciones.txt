@@ -1,0 +1,66 @@
+Clase 9 de java FUNCIONES
+
+Las funciones son fragmentos de codigo que podemos reutilizar siempre que queramos, y le podemos dar dinamismo para que hagan cosas por nosotros
+
+Ejemplo basico
+
+	<script>
+		function nombre(){
+			Instrucciones
+		}
+
+    </script>
+
+Ejemplo. la funcion se llama saludo, sin decirle con el segundo codigo que tiene que actuar, la funcion por si sola no hace nada
+
+	<script>
+		function saludo(){
+			document.write("hola");
+		}
+
+		saludo();
+
+    </script>
+
+Ejemplo calculadora, primero armo la funcion y le asigno el la funcionalidad de variable, luego le asigno un valor a cada variable
+		function suma(numero1, numero2){
+			var numero1 = numero1;
+			var numero2 = numero2;
+
+			document.write(numero1 + numero2);
+		}
+
+		suma(10,20);
+
+EJEMPLO RETURN (ES LO QUE MAS SE USA) SIRVE PARA RETORNAR UN VALOR
+ASi es como se hace correctamente la funcion anterior
+
+		function suma(numero1, numero2){
+			var numero1 = numero1;
+			var numero2 = numero2;
+
+			return numero1 + numero2;
+		}
+
+		document.write (suma(30,20));
+
+O se puede hacer asi
+
+	var suma = function(numero1, numero2){
+			var numero1 = numero1;
+			var numero2 = numero2;
+
+			return numero1 + numero2;
+		}
+
+		document.write (suma(60,20));
+
+Otro ejemplo de funcion
+
+ var numeromaximo =  function(valor1, valor2){
+       if ( valor1 > valor2){
+       	return valor1;
+       }
+       	return valor2;
+       }
+  document.write("el num max es " + numeromaximo(1,6));

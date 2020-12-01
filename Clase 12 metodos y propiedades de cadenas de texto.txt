@@ -1,0 +1,63 @@
+Clase 12 Metoso y propiedades para cadena de texto
+
+propiedad length, sirve para saber cuantos caracteres tiene una cadena
+
+	var texto = "carlos arturo";
+	var nuevoTexto= texto.length;
+
+	document.write(nuevoTexto);
+
+propiedad substring sirve para cortar una cadena de texto
+(el valor que le pongas entre parentesis es la cantidad de caracteres que va a recortar)
+En este caso cortaria 3 caracteres, por lo cual quedaria "los arturo"
+
+Tambien se le pueden poner dos valores entre parentesis( si la palabra es toreto y pongo (0,4) dejaria solo tore y sacaria lo demas
+
+	var texto = "carlos arturo";
+	var nuevoTexto= texto.substring(3);
+
+	document.write(nuevoTexto);
+
+index of nos devuelve la posicion de una letra
+En este caso nos escribe el numero 2 porque esta en la segunda posicion (toma la que encuentra primero, si hubiese mayuscula se cuenta como diferente caracter)
+
+
+	var texto = "carlos arturo";
+	var nuevoTexto= texto.indexOf("a");
+
+	document.write(nuevoTexto);
+
+Si yo lo escribiera asi, me buscaria la a, desde la posicion 5. Y nos devolveria el numero de la posicion empezando desde 0
+
+texto.indexOf("a", 5);
+
+Last Index Of es lo mismo pero busca de atras para adelante
+En este caso me tiraria 6 porque arrancaria desde la o final de arturo hasta la a
+
+
+	var texto = "carlos arturo";
+	var nuevoTexto= texto.lastindexOf(a);
+
+	document.write(nuevoTexto);
+
+Replace sirve para reemplazar una cadena
+En este caso cambiaria la variable texto por toretto, entoces escribiria toretto
+
+	var texto = "carlos arturo";
+	var nuevoTexto= texto.replace(texto, "Toretto");
+
+	document.write(nuevoTexto);
+
+En este caso cambiaria solo la palabra carlos y la cambiaria por toretto arturo
+
+	var texto = "carlos arturo";
+	var nuevoTexto= texto.replace(carlos, "Toretto");
+
+	document.write(nuevoTexto);
+
+Para cambiar todo el texto a mayuscula, y con toLowerCase lo cambiaria a minuscula
+
+	var texto = "carlos arturo";
+	var nuevoTexto= texto.toUpperCase;
+
+	document.write(nuevoTexto);

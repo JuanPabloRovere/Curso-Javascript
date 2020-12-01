@@ -1,0 +1,48 @@
+Clase 18 modificar el estilo de los elementos
+
+De esta forma al encabezado le estoy asignando dos modoficaciones a la vez, la de titulo y la de tituloGrande
+
+	<style>
+		.thumb{
+			width:200px;
+			transition:300ms all ease;
+		}
+	    .grande{
+	    	width:400px;
+	    }
+	    .titulo{
+	    	border:1px solid navy;
+	    	background:#ccc;
+	    	padding: 10px;
+	    }
+	    .tituloGrande{
+	    	font-size:60px;
+	    }
+		
+
+	</style>
+</head>
+<body>
+	<h1 id="encabezado" class="titulo tituloGrande">Encabezado!</h1>
+
+Pero es mejor crear la variable desde javascript, asignar la variable y luego ponerle la modificacion del css
+
+<script>
+	var encabezado = document.getElementById("encabezado");
+	encabezado.className = "titulo";
+
+</script>
+
+Y de esta forma haria lo mismo que al principio y le agregaria las 2 modificaciones a un mismo texto
+Si yo repitiese el encabezado.className dos veces no se sumarian las dos variables sino que una reemplazaria a la otra
+
+	var encabezado = document.getElementById("encabezado");
+	encabezado.className = "titulo tituloGrande";
+
+De esta forma puedo acceder a cualquier propiedad de css pero desde el script
+En vez de color puedo poner .background , etc.(si es una propiedad que tiene dos palabras la segunda va con mayuscula en la primera ej: fontFamily)
+
+	var encabezado = document.getElementById("encabezado");
+	encabezado.style.color = "blue";
+
+
